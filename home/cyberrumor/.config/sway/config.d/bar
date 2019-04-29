@@ -1,1 +1,3 @@
-exec_always killall waybar; waybar
+bar {
+  swaybar_command waybar
+}
