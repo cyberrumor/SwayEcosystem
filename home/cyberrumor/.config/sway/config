@@ -1,0 +1,17 @@
+# Read `man 5 sway` for a complete reference.
+
+# xwayland enable/disable
+xwayland enable
+
+# source colors from pywal
+include "$HOME/.cache/wal/colors-sway"
+
+# includes by section
+include ~/.config/sway/config.d/variables
+include ~/.config/sway/config.d/bar
+include ~/.config/sway/config.d/binds
+include ~/.config/sway/config.d/input
+include ~/.config/sway/config.d/output
+
+# includes from system-wide
+include /etc/sway/config.d/*
