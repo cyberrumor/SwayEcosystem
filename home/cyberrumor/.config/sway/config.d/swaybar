@@ -1,5 +1,5 @@
 bar {
-	status_command while date +'%A, %m/%d -%l:%M %p'; do sleep 1; done
+	status_command ~/.config/swaybar/swaybar.sh
 	pango_markup disabled
 	id 1
     	position top
