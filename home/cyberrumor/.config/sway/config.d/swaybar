@@ -1,13 +1,45 @@
 bar {
+	status_command while date +'%A, %m/%d -%l:%M %p'; do sleep 1; done
+	pango_markup disabled
+	id 1
     position top
+	# output eDP-1 [ see swaymsg -t get_outputs ]
+	# swaybar_command swaybar
+	font Ubuntu Mono 12
+	separator_symbol |
+	wrap_scroll no
+	workspace_buttons yes
+	strip_workspace_numbers no
+	binding_mode_indicator yes
+	gaps $border $gaps 0 $gaps
+	height 0
+	# bindcode [ see man 5 swaybar ]
+	# bindsym [ see man 5 swaybar ]
+	mode dock
+	hidden_state hide
+	modifier Mod1
+	status_padding $border
+	status_edge_padding $border
 
-    status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+#	tray {
+		# tray_bindcode [ see man 5 swaybar ]
+		# tray_bindsym [ see man 5 swaybar ]
+		# tray_padding $border
+		# tray_output eDP-1 [ see swaymsg -t get_outputs ]
+		# icon_theme hicolor
 
     colors {
-        statusline $foreground
-        background $background80
-        focused_workspace $color0 $foreground80 $background
-        active_workspace $color0 $background80 $foreground
-        inactive_workspace $color0 $background80 $foreground
+		background $backgroundCC
+        statusline $foregroundFF
+		separator $foregroundFF
+		focused_background $backgroundCC
+		focused_statusline $foregroundFF
+		focused_separator $foregroundFF
+		# <border> <background> <text>
+		focused_workspace $backgroundCC $backgroundCC $color6FF
+		active_workspace $backgroundCC $backgroundCC $foregroundCC
+		inactive_workspace $backgroundCC $backgroundCC $foregroundCC
+		urgent_workspace $backgroundCC $backgroundCC $color5FF
+		binding_mode $backgroundCC $backgroundCC $color5FF
     }
 }
