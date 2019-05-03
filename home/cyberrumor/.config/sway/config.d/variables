@@ -9,14 +9,18 @@ set $right semicolon
 
 set $term termite
 
+set $gaps 12
+set $border 4
+
 # Note: it's recommended that you pass the final command to sway
 # set $menu dmenu_path | dmenu | xargs swaymsg exec
 
 set $menu termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf --no-extended --print-query | tail -n1 | xargs -r swaymsg -t command exec'"
-for_window [app_id="^launcher$"] floating enable, border pixel 3
+for_window [app_id="^launcher$"] floating enable, border pixel $border
 
-default_border pixel 3
-for_window [app_id=".*"] border pixel 3
-gaps inner 12
+default_border pixel $border
+for_window [app_id=".*"] border pixel $border
+gaps inner $gaps
 gaps outer 0
 smart_gaps off
+
