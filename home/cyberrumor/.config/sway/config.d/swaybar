@@ -2,7 +2,7 @@ bar {
 	status_command while date +'%A, %m/%d -%l:%M %p'; do sleep 1; done
 	pango_markup disabled
 	id 1
-    position top
+    	position top
 	# output eDP-1 [ see swaymsg -t get_outputs ]
 	# swaybar_command swaybar
 	font Ubuntu Mono 12
@@ -28,9 +28,9 @@ bar {
 		# tray_output eDP-1 [ see swaymsg -t get_outputs ]
 		# icon_theme hicolor
 
-    colors {
+    	colors {
 		background $backgroundCC
-        statusline $foregroundFF
+        	statusline $foregroundFF
 		separator $foregroundFF
 		focused_background $backgroundCC
 		focused_statusline $foregroundFF
