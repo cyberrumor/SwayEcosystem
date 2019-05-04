@@ -1,0 +1,7 @@
+exec swayidle -w \
+	timeout 600 'swaylock -f -c 000000' \
+	timeout 1200 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"' \
+	before-sleep 'grim ~/Pictures/screenshot.png && \
+		convert ~/Pictures/screenshot.png -blur 0x4 ~/Pictures/blurshot.png && \
+		swaylock -i ~/Pictures/blurshot.png'
