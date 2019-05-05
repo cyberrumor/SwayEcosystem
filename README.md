@@ -25,3 +25,4 @@ neofetch
 fzf
 pulseaudio
 imagemagick
+mako
