@@ -1,10 +1,7 @@
 SwayEcosystem
 --------------------------------------------------
-I made this because I reinstall often and want to 
-have a laptop function perfectly in very few steps.
-I will automate as much of the post install setup
-as possible, but there are some hardware specific 
-settings that may have to be configured manually. 
+I made this because I want to have a one stop shop
+for all the tweaks I typically give a fresh install.
 
 This config requires
 --------------------------------------------------
