@@ -13,6 +13,7 @@ include ~/.config/sway/config.d/binds
 include ~/.config/sway/config.d/input
 include ~/.config/sway/config.d/output
 include ~/.config/sway/config.d/idle
+include ~/.config/sway/config.d/notifications
 
 # includes from system-wide
 include /etc/sway/config.d/*
