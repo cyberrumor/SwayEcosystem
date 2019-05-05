@@ -30,10 +30,10 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 bindsym --release Print exec grim /home/cyberrumor/Pictures/screenshot.png
-bindsym $mod4+l exec 'grim ~/.cache/screenshot.png && \
-		convert ~/.cache/screenshot.png -blur 0x4 ~/.cache/blurshot.png && \
-		rm ~/.cache/screenshot.png && \
-		swaylock -i ~/.cache/blurshot.png'
+bindsym $mod4+l exec 'grim /tmp/screenshot.png && \
+		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
+		rm /tmp/screenshot.png && \
+		swaylock -i /tmp/blurshot.png'
 
 
 # Move your focus around
