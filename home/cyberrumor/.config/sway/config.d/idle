@@ -1,11 +1,11 @@
 exec swayidle -w \
-	timeout 600 'grim ~/.cache/screenshot.png && \
-		convert ~/.cache/screenshot.png -blur 0x4 ~/.cache/blurshot.png && \
-		rm ~/.cache/screenshot.png && \
-		swaylock -i ~/.cache/blurshot.png' \
+	timeout 600 'grim /tmp/screenshot.png && \
+		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
+		rm /tmp/screenshot.png && \
+		swaylock -i /tmp/blurshot.png' \
 	timeout 1200 'swaymsg "output * dpms off"' \
 		resume 'swaymsg "output * dpms on"' \
-	before-sleep 'grim ~/.cache/screenshot.png && \
-		convert ~/.cache/screenshot.png -blur 0x4 ~/.cache/blurshot.png && \
-		rm ~/.cache/screenshot.png && \
-		swaylock -i ~/.cache/blurshot.png'
+	before-sleep 'grim /tmp/screenshot.png && \
+		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
+		rm /tmp/screenshot.png && \
+		swaylock -i /tmp/blurshot.png'
