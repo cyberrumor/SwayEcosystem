@@ -13,6 +13,7 @@ base-devel
 wpa_supplicant
 dialog
 git
+xdg-user-dirs
 ufw
 sway
 xorg-server-xwayland
