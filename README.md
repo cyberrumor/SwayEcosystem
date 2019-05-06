@@ -2,6 +2,8 @@ SwayEcosystem
 --------------------------------------------------
 I made this because I want to have a one stop shop
 for all the tweaks I typically give a fresh install.
+Known issues include:
+backlight controls from light stop working after resume from suspend.
 
 This config requires
 --------------------------------------------------
