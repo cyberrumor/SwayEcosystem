@@ -1,0 +1,19 @@
+{
+    "layer": "bottom",
+    "height": 23,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["battery", "clock"],
+    "sway/window": {
+        "max-length": 30,
+        "tooltip": false
+    },
+    "battery": {
+        "format": "bat:{capacity}%",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%a, %b %d %I:%M %p}",
+        "tooltip": false
+    }
+}
