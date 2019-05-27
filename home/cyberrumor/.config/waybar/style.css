@@ -1,0 +1,69 @@
+@import url("../../.cache/wal/colors-waybar.css");
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Noto Sans Mono;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @background;
+    color: @foreground;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: transparent;
+    color: @foreground;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+  }
+
+#workspaces button.focused {
+    background: @foreground;
+    color: @background
+}
+
+#mode, #clock, #battery {
+    padding: 0 10px;
+    margin: 0 5px;
+}
+
+#mode {
+    background: transparent;
+}
+
+#clock {
+    background-color: transparent;
+}
+
+#battery {
+    background-color: transparent;
+    color: @foreground;
+}
+
+#battery.charging {
+    color: @foreground;
+    background-color: transparent;
+}
+
+@keyframes blink {
+    to {
+        color: @background;
+    }
+}
+
+#battery.warning:not(.charging) {
+    background: transparent;
+    color: @foreground;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
