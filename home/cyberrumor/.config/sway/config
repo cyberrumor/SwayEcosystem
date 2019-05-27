@@ -8,7 +8,8 @@ include "$HOME/.cache/wal/colors-sway"
 
 # includes by section
 include ~/.config/sway/config.d/variables
-include ~/.config/sway/config.d/swaybar
+# include ~/.config/sway/config.d/swaybar
+include ~/.config/sway/config.d/waybar
 include ~/.config/sway/config.d/binds
 include ~/.config/sway/config.d/input
 include ~/.config/sway/config.d/output
