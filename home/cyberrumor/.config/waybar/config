@@ -2,14 +2,42 @@
     "layer": "bottom",
     "height": 23,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["battery", "clock"],
-    "sway/window": {
-        "max-length": 30,
+    "modules-center": ["clock"],
+    "modules-right": ["memory", "temperature", "network", "pulseaudio", "battery"],
+    "memory": {
+        "format": "{used}|{avail}",
+        "tooltip": false
+    },
+    "temperature": {
+        "thermal-zone": 0,
+        "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
+        "format": "{temperatureC}°C",
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "{icon}",
+        "format-icons": ["冷", "爛", "嵐", "襤", "蠟"],
+        "format-ethernet": "",
+        "format-disconnected": "來",
         "tooltip": false
     },
     "battery": {
-        "format": "bat:{capacity}%",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+        "tooltip": false
+    },
+    "pulseaudio": {
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "headset": "",
+            "phone": "",
+            "default": ["", "", ""]
+        },
+        "scroll0step": 1,
+        "on-click": "pavucontrol",
         "tooltip": false
     },
     "clock": {
