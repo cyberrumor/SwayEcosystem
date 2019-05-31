@@ -1,63 +1,61 @@
 @import url("../../.cache/wal/colors-waybar.css");
 
+/* https://aur.archlinux.org/packages/ttf-material-design-icons-git/ */
+
 * {
     border: none;
     border-radius: 0;
-    font-family: Noto Sans Mono;
-    font-size: 12px;
+    font-family: Ubuntu Mono, Material Design Icons;
+    font-size: medium;
     min-height: 0;
 }
-
 window#waybar {
     background: @background;
     color: @foreground;
 }
-
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 10px;
     background: transparent;
     color: @foreground;
 }
-
 #workspaces button:hover {
     box-shadow: inherit;
     text-shadow: inherit;
-  }
-
+}
 #workspaces button.focused {
     background: @foreground;
     color: @background
 }
-
-#mode, #clock, #battery {
+#mode, #clock, #memory, #temperature, #network, #pulseaudio, #pulseaudio.muted, #battery, #battery.charging {
     padding: 0 10px;
     margin: 0 5px;
-}
-
-#mode {
     background: transparent;
+    background-color: transparent;
+    color: @foreground;
 }
-
+#mode {
+}
+#memory {
+}
+#temperature {
+}
+#network {
+}
 #clock {
-    background-color: transparent;
 }
-
+#pulseaudio {
+}
+#pulseaudio.muted {
+}
 #battery {
-    background-color: transparent;
-    color: @foreground;
 }
-
 #battery.charging {
-    color: @foreground;
-    background-color: transparent;
 }
-
 @keyframes blink {
     to {
         color: @background;
     }
 }
-
 #battery.warning:not(.charging) {
     background: transparent;
     color: @foreground;
