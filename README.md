@@ -28,6 +28,8 @@ fzf
 pulseaudio
 pulseaudio-alsa
 imagemagick
+ttf-ubuntu-font-family
+https://aur.archlinux.org/packages/ttf-material-design-icons-git.git
 mako (not implimented yet)
 
 What's with these setup scripts?
