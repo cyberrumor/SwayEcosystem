@@ -26,6 +26,7 @@ light
 neofetch
 fzf
 pulseaudio
+pulseaudio-alsa
 imagemagick
 mako (not implimented yet)
 
