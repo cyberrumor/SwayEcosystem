@@ -3,7 +3,7 @@
     "height": 23,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "network", "pulseaudio", "battery"],
+    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio", "battery"],
     "memory": {
         "format": "{used}|{avail}",
         "tooltip": false
@@ -13,6 +13,11 @@
         "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
         "format": "{temperatureC}°C",
         "tooltip": false
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon}",
+        "format-icons": ["", "", "", "", "", "", ""]
     },
     "network": {
         "format-wifi": "{icon}",
