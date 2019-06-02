@@ -17,11 +17,11 @@ set $border 4
 # set $menu dmenu_path | dmenu | xargs swaymsg exec
 
 # set $menu termite --name=launcher -e "bash -c 'compgen -c | sort -u | fzf --no-extended --print-query | tail -n1 | xargs -r swaymsg -t command exec'"
-# for_window [app_id="^launcher$"] floating enable, border pixel $border
+for_window [app_id="^launcher$"] floating enable, border pixel $border, resize set 420 420, move position 935 $gaps
 
 set $menu BEMENU_BACKEND=wayland bemenu-run \
     --prompt ">" \
-    --fn "Noto Sans Mono 10" \
+    --fn "Ubuntu Mono 10" \
     --tb "$background" \
     --fb "$background" \
     --nb "$background" \
@@ -35,7 +35,6 @@ set $menu BEMENU_BACKEND=wayland bemenu-run \
     --sf "$foreground" \
     --scf "$foreground" \
     | xargs -r swaymsg -t command exec
-
 
 default_border pixel $border
 for_window [app_id=".*"] border pixel $border
