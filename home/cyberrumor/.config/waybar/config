@@ -3,7 +3,7 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio", "battery"],
+    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio", "battery", "battery#charging"],
     "memory": {
         "format": "{used}|{avail}",
         "tooltip": false
@@ -28,8 +28,15 @@
         "tooltip": false
     },
     "battery": {
-        "format": "{icon}",
+        "format-discharging": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+        "format-charging": "",
+        "tooltip": false
+    },
+    "battery#charging": {
+        "format-charging": "{icon}",
+        "format-icons": ["", "", "", "", "", "", ""],
+        "format-discharging": "",
         "tooltip": false
     },
     "pulseaudio": {
