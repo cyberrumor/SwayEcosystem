@@ -3,19 +3,19 @@ SwayEcosystem
 I made this because I want to have a one stop shop
 for all the tweaks I typically give a fresh install. 
 The fun parts to figure out how to implement were:
-- blurry swaylock
-- bemenu is the same size as waybar so opening it looks clean
+- blurry [swaylock](https://github.com/swaywm/swaylock)
+- [bemenu](https://github.com/Cloudef/bemenu) is the same size as [waybar](https://github.com/Alexays/Waybar/) so opening it looks clean
 - battery level icon seamlessly indicates whether laptop is charging or not
-- bemenu, waybar, termite, and sway are all configured to use pywal
-- simple and silent boot
+- bemenu, waybar, [termite](https://github.com/thestinger/termite), and [sway](https://github.com/swaywm/sway) are all configured to use [pywal](https://github.com/dylanaraps/pywal)
+- simple and [silent boot](https://wiki.archlinux.org/index.php/Silent_boot)
 - simple and silent login using tty1 automatically starts sway
 - closing laptop lid hibernates instead of suspends, activating swaylock on the way
-- waybar shortcuts for: wifi-menu (more shortcuts coming soon)
+- waybar shortcuts for: [wifi-menu](https://github.com/joukewitteveen/netctl/blob/master/src/wifi-menu) (more shortcuts coming soon)
 - setup scripts so you can get up and running fast (supports fresh install only)
 
 <img src="/home/cyberrumor/screenshot.png">
 
-Pretty lockscreen achieved by combing grim + imagemagick + swaylock
+Pretty lockscreen achieved by combing [grim](https://github.com/emersion/grim) + [imagemagick](https://imagemagick.org/index.php) + swaylock
 
 <img src="/home/cyberrumor/blurshot.png">
 
