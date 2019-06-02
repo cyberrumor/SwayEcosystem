@@ -7,6 +7,10 @@ backlight controls from light stop working after resume from suspend.
 
 <img src="/home/cyberrumor/screenshot.png">
 
+Pretty lockscreen achieved by combing grim + imagemagick + swaylock
+
+<img src="/home/cyberrumor/blurshot.png">
+
 This config uses
 --------------------------------------------------
 base
