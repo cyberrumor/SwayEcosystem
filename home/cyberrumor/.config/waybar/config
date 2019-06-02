@@ -1,6 +1,6 @@
 {
     "layer": "bottom",
-    "height": 23,
+    "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
     "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio", "battery"],
@@ -24,6 +24,7 @@
         "format-icons": ["冷", "爛", "嵐", "襤", "蠟"],
         "format-ethernet": "",
         "format-disconnected": "來",
+        "on-click": "termite --name=launcher -e 'sudo wifi-menu'",
         "tooltip": false
     },
     "battery": {
