@@ -5,6 +5,8 @@ for all the tweaks I typically give a fresh install.
 Known issues include:
 backlight controls from light stop working after resume from suspend.
 
+<img src="/home/cyberrumor/screenshot.png">
+
 This config uses
 --------------------------------------------------
 base
@@ -51,7 +53,7 @@ to the section on bootloaders, stop, and follow these commands.
 - sudo ./RootSetup.sh
 - ./UserSetup.sh
 
-Don't forget to edit /boot/loader/entries/arch.conf then run # mkinitcpio -p linux
+Don't forget to edit /boot/loader/entries/arch.conf then run '# mkinitcpio -p linux'
 If you don't, your system won't boot. After that, restart like this:
 
 - exit
