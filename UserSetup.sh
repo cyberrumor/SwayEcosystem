@@ -3,6 +3,9 @@ xdg-user-dirs-update
 echo 'Copying user configuration files to your user folder.'
 cp -r home/cyberrumor/* ~/
 cp -r home/cyberrumor/.* ~/
+echo 'Cleaning up unused files'
+rm ~/screenshot.png
+rm ~/blurshot.png
 echo 'Setting wallpaper with wal'
 wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
 echo 'To change your wallpaper, and theme your system dynamically, run
