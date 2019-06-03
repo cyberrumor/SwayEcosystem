@@ -49,8 +49,8 @@
             "phone": "",
             "default": ["", "", ""]
         },
-        "scroll0step": 1,
-        "on-click": "pavucontrol",
+        "scroll-step": 1,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
     },
     "clock": {
