@@ -29,6 +29,7 @@ This config uses
 - xdg-user-dirs (populates your home folder with useful folders)
 - ufw (uncomplicated firewall, the default firewall solution for Ubuntu)
 - sway (lightweight and configurable window manager for a beautiful system, even on old hardware)
+- swaybg (perfect wallpaper setting program for any wayland compositor)
 - xorg-server-xwayland (run legacy software with minimal issues)
 - termite (a terminal emulator that has native wayland support)
 - swaylock (logo key + L will lock your screen by default with this config)
