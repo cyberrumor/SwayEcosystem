@@ -17,7 +17,8 @@
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", ""]
+        "format-icons": ["", "", "", "", "", "", ""],
+        "tooltip": false
     },
     "network": {
         "format-wifi": "{icon}",
@@ -31,12 +32,14 @@
         "format-discharging": "{icon}",
         "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
         "format-charging": "",
+        "format-full": "",
         "tooltip": false
     },
     "battery#charging": {
         "format-charging": "{icon}",
         "format-icons": ["", "", "", "", "", "", ""],
         "format-discharging": "",
+        "format-full": "",
         "tooltip": false
     },
     "pulseaudio": {
