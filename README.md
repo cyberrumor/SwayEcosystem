@@ -19,6 +19,10 @@ Pretty lockscreen achieved by combing [grim](https://github.com/emersion/grim) +
 
 <img src="/home/cyberrumor/blurshot.png">
 
+Foregoing a display manager cuts down on configuration, keeping it simple. That doesn't mean you can't customize your login screen!
+
+<img src="/home/cyberrumor/issue.png">
+
 This config uses
 --------------------------------------------------
 - base (I use Arch, btw)
