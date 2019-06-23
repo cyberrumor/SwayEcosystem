@@ -1,7 +1,7 @@
 echo 'Updating.'
 pacman -Syu
 echo 'Installing necessary packages.'
-pacman -S xdg-user-dirs ufw sway swaybg xorg-server-xwayland termite swaylock swayidle python-pywal grim intel-ucode light neofetch fzf pulseaudio pulseaudio-alsa imagemagick mako bemenu waybar ttf-ubuntu-font-family archlinux-wallpaper linux-lts
+pacman -S xdg-user-dirs ufw sway swaybg xorg-server-xwayland termite swaylock swayidle python-pywal grim intel-ucode light neofetch fzf pulseaudio pulseaudio-alsa imagemagick mako bemenu waybar ttf-ubuntu-font-family bluez bluez-utils archlinux-wallpaper linux-lts
 echo 'Installing systemd-boot'
 bootctl --path=/boot install
 echo 'Copying bootloader configuration for silent boot.'
