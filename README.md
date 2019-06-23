@@ -49,6 +49,8 @@ This config uses
 - imagemagick (fulfills dependency for a blurry lock screen. Check out the man page for other ways to rice your screen lock)
 - ttf-ubuntu-font-family (legible and lovely font family used by Ubuntu that renders well on a wide variety of screen types)
 - https://aur.archlinux.org/packages/ttf-material-design-icons-git.git (one of the few icon sets that supports signal strength for wifi, and precise battery levels)
+- bluez - for bluetooth functionality
+- bluez-utils - helps automate the bluetooth connection process
 - mako (a wayland notification daemon that I haven't yet implimented in this config. Coming soon!)
 
 What's with these setup scripts?
