@@ -12,6 +12,8 @@ mkdir /etc/systemd/system
 cp -r etc /etc
 cp usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh /usr/lib/systemd/system-sleep/
 chmod +x /usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh
+echo 'Configuring bluetooth to allow Xbox One X and Xbox One S controllers to connect wirelessly.'
+bash -c "echo 1 > /sys/module/bluetooth/parameters/disable_ertm"
 echo 'You need to manually edit /boot/loader/entries/arch.conf'
 echo 'and'
 echo '/boot/loader/entries/arch-lts.conf'
