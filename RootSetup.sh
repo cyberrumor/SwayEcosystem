@@ -16,6 +16,8 @@ echo 'Configuring bluetooth to allow Xbox One X and Xbox One S controllers to co
 bash -c "echo 1 > /sys/module/bluetooth/parameters/disable_ertm"
 echo 'Enabling bluetooth.service.'
 systemctl enable bluetooth.service
+echo 'Setting bluetooth to power on automatically at boot.'
+echo "AutoEnable=true" >> /etc/bluetooth/main.conf
 echo 'Enabling ufw.service.'
 ufw enable
 echo 'You need to manually edit /boot/loader/entries/arch.conf'
