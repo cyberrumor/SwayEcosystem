@@ -3,7 +3,7 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio", "battery", "battery#charging"],
+    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio#mic", "pulseaudio", "battery", "battery#charging"],
     "memory": {
         "format": "{used}|{avail}",
         "tooltip": false
@@ -46,6 +46,8 @@
         "format": "{icon}",
         "format-bluetooth": "{icon}",
         "format-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
         "format-icons": {
             "headphones": "",
             "headset": "",
@@ -55,6 +57,13 @@
         "scroll-step": 1,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
+    },
+    "pulseaudio#mic": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "tooltip": false 
     },
     "clock": {
         "format": "{:%a, %b %d %I:%M %p}",
