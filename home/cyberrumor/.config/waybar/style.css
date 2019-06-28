@@ -26,7 +26,7 @@ window#waybar {
     background: @foreground;
     color: @background
 }
-#mode, #clock, #memory, #temperature, #backlight, #network, #pulseaudio, #pulseaudio.muted, #battery, #battery.charging {
+#mode, #clock, #memory, #temperature, #backlight, #network, #pulseaudio, #pulseaudio.muted, #pulseaudio.mic, #battery, #battery.charging {
     padding: 0 10px;
     margin: 0 5px;
     background: transparent;
@@ -48,6 +48,8 @@ window#waybar {
 #pulseaudio {
 }
 #pulseaudio.muted {
+}
+#pulseaudio.mic {
 }
 #battery {
 }
