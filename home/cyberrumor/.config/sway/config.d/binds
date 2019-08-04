@@ -33,7 +33,8 @@ bindsym --release Print exec grim /home/cyberrumor/Pictures/screenshot.png
 bindsym $mod4+l exec 'grim /tmp/screenshot.png && \
 		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
 		rm /tmp/screenshot.png && \
-		swaylock -i /tmp/blurshot.png'
+		swaylock -i /tmp/blurshot.png && \
+		rm /tmp/blurshot.png'
 
 
 # Move your focus around
@@ -88,14 +89,14 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Layout stuff:
 #
 # You can "split" the current object of your focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
+# $mod+h or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
+bindsym $mod+h splith
 bindsym $mod+v splitv
 
 # Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
@@ -145,5 +146,6 @@ bindsym Return mode "default"
 bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
 
 
