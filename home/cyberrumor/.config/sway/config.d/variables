@@ -37,8 +37,12 @@ set $menu BEMENU_BACKEND=wayland bemenu-run \
     | xargs -r swaymsg -t command exec
 
 default_border pixel $border
+default_floating_border pixel $border
 for_window [app_id=".*"] border pixel $border
+for_window [class="Steam"] floating enable
+for_window [class="steam"] floating enable
 gaps inner $gaps
 gaps outer 0
 smart_gaps off
+
 
