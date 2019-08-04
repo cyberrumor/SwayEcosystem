@@ -5,7 +5,7 @@
     "modules-center": ["clock"],
     "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio#mic", "pulseaudio", "battery", "battery#charging"],
     "memory": {
-        "format": "{used}|{avail}",
+        "format": "{used:0.1f} | {avail:0.1f}",
         "tooltip": false
     },
     "temperature": {
@@ -70,3 +70,4 @@
         "tooltip": false
     }
 }
+
