@@ -1,73 +1,78 @@
-{
-    "layer": "bottom",
-    "height": 19,
-    "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "backlight", "network", "pulseaudio#mic", "pulseaudio", "battery", "battery#charging"],
-    "memory": {
-        "format": "{used:0.1f} | {avail:0.1f}",
-        "tooltip": false
-    },
-    "temperature": {
-        "thermal-zone": 0,
-        "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
-        "format": "{temperatureC}°C",
-        "tooltip": false
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon}",
-        "format-icons": ["", "", "", "", "", "", ""],
-        "tooltip": false
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-icons": ["冷", "爛", "嵐", "襤", "蠟"],
-        "format-ethernet": "",
-        "format-disconnected": "來",
-        "on-click": "termite --name=launcher -e 'sudo wifi-menu'",
-        "tooltip": false
-    },
-    "battery": {
-        "format-discharging": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
-        "format-charging": "",
-        "format-full": "",
-        "tooltip": false
-    },
-    "battery#charging": {
-        "format-charging": "{icon}",
-        "format-icons": ["", "", "", "", "", "", ""],
-        "format-discharging": "",
-        "format-full": "",
-        "tooltip": false
-    },
-    "pulseaudio": {
-        "format": "{icon}",
-        "format-bluetooth": "{icon}",
-        "format-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphones": "",
-            "headset": "",
-            "phone": "",
-            "default": ["", "", ""]
-        },
-        "scroll-step": 1,
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-        "tooltip": false
-    },
-    "pulseaudio#mic": {
-        "format": "{format_source}",
-        "format-source": "",
-        "format-source-muted": "",
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "tooltip": false 
-    },
-    "clock": {
-        "format": "{:%a, %b %d %I:%M %p}",
-        "tooltip": false
+/* use the below line for opaque waybar */
+/* @import url("../../.cache/wal/colors-waybar.css"); */
+
+/* use the below line for semi-transparent waybar */
+@import url("../../.cache/wal/colors-custom-gtk3.css");
+
+/* get your icons from the link below */
+/* https://aur.archlinux.org/packages/ttf-material-design-icons-git/ */
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Ubuntu Mono, Material Design Icons;
+    font-size: medium;
+    min-height: 0;
+}
+window#waybar {
+    background: @background;
+    color: @foreground;
+}
+#workspaces button {
+    padding: 0 10px;
+    background: transparent;
+    color: @foreground;
+}
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+#workspaces button.focused {
+    background: @foreground;
+    color: @background
+}
+#mode, #clock, #memory, #temperature, #backlight, #network, #pulseaudio, #pulseaudio.muted, #pulseaudio.mic, #battery, #battery.charging {
+    padding: 0 10px;
+    margin: 0 5px;
+    background: transparent;
+    background-color: transparent;
+    color: @foreground;
+}
+#mode {
+}
+#memory {
+}
+#temperature {
+}
+#backlight {
+}
+#network {
+}
+#clock {
+}
+#pulseaudio {
+}
+#pulseaudio.muted {
+}
+#pulseaudio.mic {
+}
+#battery {
+}
+#battery.charging {
+}
+@keyframes blink {
+    to {
+        color: @background;
     }
 }
+#battery.warning:not(.charging) {
+    background: transparent;
+    color: @foreground;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 
