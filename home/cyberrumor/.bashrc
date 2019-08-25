@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Source Bash functions
+. ~/.bash_functions
+
 # Import pywal colors
 (cat ~/.cache/wal/sequences &)
 
