@@ -15,3 +15,7 @@ max() {
 }
 
 echo $(( $(brightness) + $(factor) )) > "$path"/brightness
+
+makoctl dismiss --all
+makoctl reload
+notify-send --icon=notification-display-brightness brightness
