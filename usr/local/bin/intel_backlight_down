@@ -17,3 +17,7 @@ max() {
 # echo "actual_brightness = $(brightness) , max_brightness = $(max) , factor = $(f>
 
 echo $(( $(brightness) - $(factor) )) > "$path"/brightness
+
+makoctl dismiss --all
+makoctl reload
+notify-send --icon=notification-display-brightness brightness
