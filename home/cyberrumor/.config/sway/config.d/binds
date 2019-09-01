@@ -27,8 +27,8 @@ bindsym XF86AudioRaiseVolume exec 'pactl set-sink-mute @DEFAULT_SINK@ 0 && amixe
 bindsym XF86AudioLowerVolume exec 'pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 5%-'
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-bindsym XF86MonBrightnessUp exec light -A 5
-bindsym XF86MonBrightnessDown exec light -U 5
+bindsym XF86MonBrightnessUp exec intel_backlight_up
+bindsym XF86MonBrightnessDown exec intel_backlight_down
 bindsym --release Print exec grim /home/cyberrumor/Pictures/screenshot.png
 bindsym $mod4+l exec 'grim /tmp/screenshot.png && \
 		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
