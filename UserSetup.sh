@@ -9,6 +9,7 @@ rm ~/blurshot.png
 rm ~/issue.png
 echo 'Setting wallpaper with wal'
 wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
+ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
 echo 'To change your wallpaper, and theme your system dynamically, run
 	$ wal -i /path/to/image.jpg'
 echo 'For waybar icons to display, you must install
