@@ -23,8 +23,8 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 # Media Keys
-bindsym XF86AudioRaiseVolume exec 'pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 5%+'
-bindsym XF86AudioLowerVolume exec 'pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 5%-'
+bindsym XF86AudioRaiseVolume exec volumeup
+bindsym XF86AudioLowerVolume exec volumedown
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym XF86MonBrightnessUp exec intel_backlight_up
