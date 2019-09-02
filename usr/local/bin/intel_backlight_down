@@ -18,5 +18,13 @@ max() {
 
 echo $(( $(brightness) - $(factor) )) > "$path"/brightness
 
-makoctl reload && makoctl dismiss --all && \
-notify-send --icon=notification-display-brightness "$(brightness) / $(max)"
+send_notification() {
+	level=$(brightness)
+	top=$(max)
+	bar=$(seq -s "――" $(( (level * 10) / (top + ((1000 * level) / top))  )) | sed 's/[0-9]//g')
+	# bar=$(( (level * 10) / (top + ((1000 * level) / top))  ))
+	makoctl reload && makoctl dismiss --all && \
+	notify-send -i notification-display-brightness "$bar"
+}
+
+send_notification
