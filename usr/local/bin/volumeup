@@ -6,8 +6,15 @@ pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 10%+
 XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
 
 currentvolume() {
-        pamixer --get-volume
+	pamixer --get-volume
 }
 
-makoctl reload && makoctl dismiss --all && \
-notify-send --icon=notification-audio-volume-high "$(currentvolume)"
+send_notification() {
+	volume=$(currentvolume)
+	bar=$(seq -s "――" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	makoctl reload && makoctl dismiss --all && \
+	notify-send --icon=notification-audio-volume-high "$bar"
+}
+
+send_notification
+
