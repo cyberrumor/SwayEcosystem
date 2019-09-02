@@ -1,0 +1,28 @@
+#!/bin/bash
+# requires pamixer to test whether audio is muted
+
+pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+currentvolume() {
+	pamixer --get-volume
+}
+
+makoctl reload && makoctl dismiss --all
+
+send_notification_unmuted() {
+	volume=$(currentvolume)
+	bar=$(seq -s "――" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	makoctl reload && makoctl dismiss --all && \
+	notify-send --icon=notification-audio-volume-high "$bar"
+}
+
+send_notification_muted() {
+	makoctl reload && makoctl dismiss --all && \
+	notify-send --icon=notification-audio-volume-muted "Muted"
+}
+
+if [[ $(pamixer --get-mute) == true ]]; then
+	send_notification_muted ; else
+	send_notification_unmuted
+fi
+
