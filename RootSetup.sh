@@ -1,7 +1,7 @@
 echo 'Updating.'
 pacman -Syu
 echo 'Installing necessary packages.'
-pacman -S xdg-user-dirs ufw sway swaybg xorg-server-xwayland termite swaylock swayidle python-pywal grim intel-ucode neofetch fzf pulseaudio pulseaudio-alsa imagemagick mako libnotify openssh bemenu waybar ttf-ubuntu-font-family archlinux-wallpaper linux-lts
+pacman -S xdg-user-dirs ufw sway swaybg xorg-server-xwayland termite swaylock swayidle python-pywal grim intel-ucode neofetch fzf pulseaudio pulseaudio-alsa pamixer imagemagick mako libnotify openssh bemenu waybar ttf-ubuntu-font-family archlinux-wallpaper linux-lts
 echo 'Installing systemd-boot'
 bootctl --path=/boot install
 echo 'Copying bootloader configuration for silent boot.'
@@ -12,10 +12,9 @@ mkdir /etc/systemd/system
 cp -r etc /etc
 cp usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh /usr/lib/systemd/system-sleep/
 chmod +x /usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh
-cp usr/local/bin/intel_backlight_up /usr/local/bin/intel_backlight_up
-chmod +x /usr/local/bin/intel_backlight_up
-cp usr/local/bin/intel_backlight_down /usr/local/bin/intel_backlight_down
-chmod +x /usr/local/bin/intel_backlight_down
+mkdir /usr/local/bin
+cp usr/local/bin/* /usr/local/bin/
+chmod +x /usr/local/bin/*
 echo 'Configuring firewall to allow limited tcp traffic over port 22 (useful for ssh).'
 ufw default deny
 ufw limit 22/tcp
