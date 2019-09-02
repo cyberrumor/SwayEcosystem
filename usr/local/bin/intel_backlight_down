@@ -3,21 +3,20 @@
 path=/sys/class/backlight/intel_backlight
 
 brightness() {
-        cat "$path"/actual_brightness
+	cat "$path"/actual_brightness
 }
 
 factor() {
-        expr $(max) / 10
+	expr $(max) / 10
 }
 
 max() {
-        cat "$path"/max_brightness
+	cat "$path"/max_brightness
 }
 
-# echo "actual_brightness = $(brightness) , max_brightness = $(max) , factor = $(f>
+# echo "actual_brightness = $(brightness) , max_brightness = $(max) , factor = $(factor)"
 
 echo $(( $(brightness) - $(factor) )) > "$path"/brightness
 
-makoctl dismiss --all
-makoctl reload
-notify-send --icon=notification-display-brightness brightness
+makoctl reload && makoctl dismiss --all && \
+notify-send --icon=notification-display-brightness "$(brightness) / $(max)"
