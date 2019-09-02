@@ -1,0 +1,13 @@
+#!/bin/bash
+# requires pamixer package to read out volume
+
+pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 10%+
+
+XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+
+currentvolume() {
+        pamixer --get-volume
+}
+
+makoctl reload && makoctl dismiss --all && \
+notify-send --icon=notification-audio-volume-high "$(currentvolume)"
