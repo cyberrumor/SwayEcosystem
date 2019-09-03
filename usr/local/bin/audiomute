@@ -7,18 +7,20 @@ currentvolume() {
 	pamixer --get-volume
 }
 
-makoctl reload && makoctl dismiss --all
-
 send_notification_unmuted() {
 	volume=$(currentvolume)
-	bar=$(seq -s "――" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	bar=$(seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	barempty=$(seq -s "" $(( (100 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl reload && makoctl dismiss --all && \
-	notify-send --icon=notification-audio-volume-high "$bar"
+	notify-send --icon=audio-volume-high-symbolic.symbolic "$bar$barempty"
 }
 
 send_notification_muted() {
+	volume=$(currentvolume)
+	bar=$(seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	barempty=$(seq -s "" $(( (100 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl reload && makoctl dismiss --all && \
-	notify-send --icon=notification-audio-volume-muted "Muted"
+	notify-send --icon=audio-volume-muted-symbolic.symbolic "$bar$barempty"
 }
 
 if [[ $(pamixer --get-mute) == true ]]; then
