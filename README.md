@@ -6,7 +6,7 @@ The fun parts to figure out how to implement were:
 - blurry [swaylock](https://github.com/swaywm/swaylock)
 - [bemenu](https://github.com/Cloudef/bemenu) is the same size as [waybar](https://github.com/Alexays/Waybar/) so opening it looks clean
 - battery level icon seamlessly indicates whether laptop is charging or not
-- bemenu, waybar, [termite](https://github.com/thestinger/termite), and [sway](https://github.com/swaywm/sway) are all configured to use [pywal](https://github.com/dylanaraps/pywal)
+- bemenu, waybar, [termite](https://github.com/thestinger/termite), [mako](https://github.com/emersion/mako), and [sway](https://github.com/swaywm/sway) are all configured to use [pywal](https://github.com/dylanaraps/pywal)
 - simple and [silent boot](https://wiki.archlinux.org/index.php/Silent_boot)
 - simple and silent login using tty1 automatically starts sway
 - closing laptop lid hibernates instead of suspends, activating swaylock on the way
@@ -41,7 +41,6 @@ This config uses
 - python-pywal (for dynamic system theming)
 - grim (for screenshots)
 - intel-ucode (if you have an AMD processor, you'll have to manually edit RootSetup.sh, /boot/loader/entries/* , and ~/.config/waybar/config brightness module to implement the AMD alternatives.
-- light (supports a wide variety of backlight controllers, and picks the best one automatically)
 - neofetch (prints system info whenever you open a terminal, an obvious must-have)
 - fzf (not required if using bemenu for program launcher. bemenu is default)
 - pulseaudio (wonderful sound server, in case you like to listen to music, podcasts, or watch youtube or videos)
@@ -50,7 +49,7 @@ This config uses
 - ttf-ubuntu-font-family (legible and lovely font family used by Ubuntu that renders well on a wide variety of screen types)
 - https://aur.archlinux.org/packages/ttf-material-design-icons-git.git (one of the few icon sets that supports signal strength for wifi, and precise battery levels)
 - openssh (connect to your computer from anywhere for remote shell execution)
-- mako (a wayland notification daemon that I haven't yet implimented in this config. Coming soon!)
+- mako (a wayland notification daemon, themes automatically with pywal)
 
 What's with these setup scripts?
 --------------------------------------------------
