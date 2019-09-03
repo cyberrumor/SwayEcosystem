@@ -7,6 +7,7 @@ echo 'Cleaning up unused files'
 rm ~/screenshot.png
 rm ~/blurshot.png
 rm ~/issue.png
+chmod +x ~/.config/mako/launch.sh
 echo 'Setting wallpaper with wal'
 wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
 ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
