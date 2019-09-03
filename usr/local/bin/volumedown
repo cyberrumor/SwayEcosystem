@@ -11,10 +11,10 @@ currentvolume() {
 
 send_notification() {
 	volume=$(currentvolume)
-	bar=$(seq -s "――" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	bar=$(seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g')
+	barempty=$(seq -s "" $(( (100 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl reload && makoctl dismiss --all && \
-	notify-send --icon=notification-audio-volume-high "$bar"
+	notify-send --icon=audio-volume-high-symbolic.symbolic "$bar$barempty"
 }
 
 send_notification
-
