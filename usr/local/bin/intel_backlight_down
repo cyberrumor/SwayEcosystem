@@ -16,7 +16,7 @@ max() {
 
 # echo "actual_brightness = $(brightness) , max_brightness = $(max) , factor = $(factor)"
 
-echo $(( $(brightness) - $(factor) )) > "$path"/brightness
+echo $(( $(brightness) + $(factor) )) > "$path"/brightness
 
 send_notification() {
 	level=$(brightness)
@@ -29,3 +29,4 @@ send_notification() {
 }
 
 send_notification
+
