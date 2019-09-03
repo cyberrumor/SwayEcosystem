@@ -14,10 +14,10 @@ max() {
 	cat "$path"/max_brightness
 }
 
-if [[ $(( $(brightness) + $(factor) )) -ge $(max) ]]; then
-	echo $(max) > "$path"/brightness
+if [[ $(( $(brightness) - $(factor) )) -le 0 ]]; then
+	echo 0 > "$path"/brightness
 else
-	echo $(( $(brightness) + $(factor) )) > "$path"/brightness
+	echo $(( $(brightness) - $(factor) )) > "$path"/brightness
 fi
 
 send_notification() {
@@ -26,7 +26,7 @@ send_notification() {
 	step=$(factor)
 	bar=$(seq -s "" $(( (10 * $current) / $top  )) | sed 's/[0-9]//g')
 	barempty=$(seq -s "" $(( ( 11 - ((10 * $current) / $top )) )) | sed 's/[0-9]//g')
-	makoctl reload && makoctl dismiss --all && \
+	makoctl dismiss --all && \
 	notify-send -i display-brightness-symbolic.symbolic "$bar$barempty"
 }
 
@@ -34,7 +34,7 @@ correctly_notify() {
 	current=$(brightness)
 	step=$(factor)
 	if [[ $current -le $step ]]; then
-		makoctl reload && makoctl dismiss --all && \
+		makoctl dismiss --all && \
 		notify-send -i display-brightness-symbolic.symbolic ""
 	else
 		send_notification
