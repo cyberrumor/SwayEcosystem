@@ -4,9 +4,9 @@ echo 'Copying user configuration files to your user folder.'
 cp -r home/cyberrumor/* ~/
 cp -r home/cyberrumor/.* ~/
 echo 'Cleaning up unused files'
-rm ~/screenshot.png
+rm ~/makodemo.png
 rm ~/blurshot.png
-rm ~/issue.png
+rm ~/waldemo.png
 chmod +x ~/.config/mako/launch.sh
 echo 'Setting wallpaper with wal'
 wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
