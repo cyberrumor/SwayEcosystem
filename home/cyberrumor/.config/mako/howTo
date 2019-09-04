@@ -1,0 +1,12 @@
+If you came here for mako + pywal, but didn't use the setup scripts, it works like so:
+
+Instead of using mako default config location, configure mako in ~/.config/wal/templates/mako.conf. Use color codes as explained by pywal. 
+
+Make launch.sh executable, and make sway point to it and "exec_always" the mako launch script. 
+
+run pywal to generate ~/.cache/wal/mako.conf
+
+Finally, symlink the cached wal config to mako default config location:
+$ ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
+
+Now, whenever you run pywal, mako will read the new theme. :)
