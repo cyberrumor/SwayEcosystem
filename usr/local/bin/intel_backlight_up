@@ -18,10 +18,10 @@ factor() {
 
 step=$(factor)
 
-if [[ $(( $(brightness) - $step )) -le 0 ]]; then
-	echo 0 > "$path"/brightness
+if [[ $(( $(brightness) + $step )) -ge $top ]]; then
+	echo $top > "$path"/brightness
 else
-	echo $(( $(brightness) - $step )) > "$path"/brightness
+	echo $(( $(brightness) + $step )) > "$path"/brightness
 fi
 
 send_notification() {
