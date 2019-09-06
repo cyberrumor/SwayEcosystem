@@ -2,28 +2,30 @@
 
 path=/sys/class/backlight/intel_backlight
 
+max() {
+	cat "$path"/max_brightness
+}
+
+top=$(max)
+
 brightness() {
 	cat "$path"/actual_brightness
 }
 
 factor() {
-	expr $(max) / 10
+	expr $top / 10
 }
 
-max() {
-	cat "$path"/max_brightness
-}
+step=$(factor)
 
-if [[ $(( $(brightness) - $(factor) )) -le 0 ]]; then
+if [[ $(( $(brightness) - $step )) -le 0 ]]; then
 	echo 0 > "$path"/brightness
 else
-	echo $(( $(brightness) - $(factor) )) > "$path"/brightness
+	echo $(( $(brightness) - $step )) > "$path"/brightness
 fi
 
 send_notification() {
 	current=$(brightness)
-	top=$(max)
-	step=$(factor)
 	bar=$(seq -s "" $(( (10 * $current) / $top  )) | sed 's/[0-9]//g')
 	barempty=$(seq -s "" $(( ( 11 - ((10 * $current) / $top )) )) | sed 's/[0-9]//g')
 	makoctl dismiss --all && \
@@ -32,7 +34,6 @@ send_notification() {
 
 correctly_notify() {
 	current=$(brightness)
-	step=$(factor)
 	if [[ $current -le $step ]]; then
 		makoctl dismiss --all && \
 		notify-send -i display-brightness-symbolic.symbolic ""
