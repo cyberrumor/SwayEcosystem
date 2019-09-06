@@ -9,8 +9,9 @@ currentvolume() {
 	pamixer --get-volume
 }
 
+volume=$(currentvolume)
+
 send_notification() {
-	volume=$(currentvolume)
 	bar=$(seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g')
 	barempty=$(seq -s "" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl dismiss --all && \
@@ -18,7 +19,6 @@ send_notification() {
 }
 
 correctly_notify() {
-	volume=$(currentvolume)
 	if [[ $volume -lt 10 ]]; then
 		makoctl dismiss --all && \
 		notify-send -i audio-volume-low-symbolic.symbolic ""
