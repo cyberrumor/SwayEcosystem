@@ -1,17 +1,18 @@
 #!/bin/bash
 # requires pamixer package to read out volume
 
-pactl set-sink-mute @DEFAULT_SINK@ 0 && amixer -D pulse sset Master 10%-
-
-XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
-
 currentvolume() {
 	pamixer --get-volume
 }
 
-volume=$(currentvolume)
+if [[ $(( $(currentvolume) - 10 )) -le 0 ]]; then
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ 0%
+else
+	pactl set-sink-mute @DEFAULT_SINK@ 0 && pactl set-sink-volume @DEFAULT_SINK@ -10%
+fi
 
 send_notification() {
+	volume=$(currentvolume)
 	bar=$(seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g')
 	barempty=$(seq -s "" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl dismiss --all && \
@@ -19,7 +20,8 @@ send_notification() {
 }
 
 correctly_notify() {
-	if [[ $volume -lt 10 ]]; then
+	volume=$(currentvolume)
+	if [[ $volume -le 0 ]]; then
 		makoctl dismiss --all && \
 		notify-send -i audio-volume-low-symbolic.symbolic ""
 	else
@@ -28,3 +30,5 @@ correctly_notify() {
 }
 
 correctly_notify
+
+XDG_RUNTIME_DIR=/run/user/1000 paplay /usr/share/sounds/freedesktop/stereo/bell.oga
