@@ -1,7 +1,7 @@
 SwayEcosystem
 --------------------------------------------------
 I made this because I want to have a one stop shop
-for all the tweaks I typically give a fresh install. 
+for all the tweaks I typically give a fresh install.
 
 <img src="/home/cyberrumor/makodemo.png">
 
@@ -36,15 +36,12 @@ to the section on bootloaders, stop, and follow these commands.
 - git clone https://github.com/cyberrumor/SwayEcosystem.git
 - chmod +x RootSetup.sh
 - chmod +x UserSetup.sh
+- Don't blindly trust, review these scripts before running!
 - sudo ./RootSetup.sh
 - ./UserSetup.sh
 
-Don't forget to edit /boot/loader/entries/arch.conf then run '# mkinitcpio -p linux'
-If you don't, your system won't boot. After that, restart like this:
+Now you can return to the archwiki install guide. Don't forget to install
+and configure a bootloader! 
 
-- exit
-- exit
-- umount -a
-- shutdown -h now
-
-Remove the installation media, and you'll have my setup. 
+After you've rebooted and confirmed the system is working correctly, 
+I highly recommend configuring [silent boot](https://wiki.archlinux.org/index.php/Silent_boot). 
