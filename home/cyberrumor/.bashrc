@@ -8,6 +8,14 @@
 # Source Bash functions
 . ~/.bash_functions
 
+# use bash-completion if avail, requires bash-completion
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+	. /usr/share/bash-completion/bash_completion
+
+# command not found, requires pkgfile, generate cache with 'sudo pkgfile -u'
+[[ $PS1 && -f /usr/share/doc/pkgfile/command-not-found.bash ]] && \
+	. /usr/share/doc/pkgfile/command-not-found.bash
+
 # Import pywal colors
 (cat ~/.cache/wal/sequences &)
 
