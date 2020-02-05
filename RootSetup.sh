@@ -11,5 +11,11 @@ chmod +x /usr/lib/systemd/system-sleep/PciFullRescanOnWake.sh
 mkdir /usr/local/bin
 cp usr/local/bin/* /usr/local/bin/
 chmod +x /usr/local/bin/*
-echo "if you're in chroot, don't forget to install a bootloader!"
-echo "If brightness controls don't work, try adding your user to the video group."
+echo "preparing command-not-found feature"
+pkgfile --update
+echo "If you're using intel backlight and brightness controls don't work,"
+echo "try adding your user to the video group."
+echo "If that still doesn't work, see https://wiki.archlinux.org/index.php/Backlight#ACPI"
+echo "If you're not using intel-backlight, the scripts are in /usr/local/bin. GLHF!"
+echo "If you're in chroot, don't forget to install a bootloader!"
+
