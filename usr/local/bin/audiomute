@@ -9,6 +9,21 @@ currentvolume() {
 
 volume=$(currentvolume)
 
+
+intensity() {
+	if [[ $volume -ge 70 ]]; then
+		echo high
+	else
+		if [[ $volume -le 30 ]]; then
+			echo low
+		else
+		echo medium
+		fi
+	fi
+}
+
+result=$(intensity)
+
 barfull() {
 	seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g'
 }
@@ -20,7 +35,7 @@ barempty() {
 send_notification_unmuted() {
 	drawbar=$(barfull)$(barempty)
 	makoctl dismiss --all && \
-	notify-send -i audio-volume-high-symbolic.symbolic "$drawbar"
+	notify-send -i audio-volume-$result-symbolic.symbolic "$drawbar"
 }
 
 send_notification_muted() {
@@ -41,7 +56,7 @@ correctly_notify_muted() {
 correctly_notify_unmuted() {
 	if [[ $volume -lt 10 ]]; then
 		makoctl dismiss --all && \
-		notify-send -i audio-volume-low-symbolic.symbolic ""
+		notify-send -i audio-volume-$result-symbolic.symbolic ""
 	else
 		send_notification_unmuted
 	fi
@@ -51,3 +66,4 @@ if [[ $(pamixer --get-mute) == true ]]; then
 	correctly_notify_muted ; else
 	correctly_notify_unmuted
 fi
+
