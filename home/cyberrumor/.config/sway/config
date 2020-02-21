@@ -18,7 +18,7 @@ include ~/.config/sway/config.d/idle
 # start notification daemon
 # configure it at ~/.config/wal/templates/mako.conf
 # then run pywal for changes to take effect
-exec_always ~/.config/mako/launch.sh
+exec_always "$HOME/.config/mako/launch.sh"
 
 # includes from system-wide
 include /etc/sway/config.d/*
