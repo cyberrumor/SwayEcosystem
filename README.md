@@ -55,5 +55,4 @@ Finally, if you would like to encourage my consumption of creatine, thank you!
  BTC:39pggoYtcGJ5Vg5DACvvCqp99a4DNiSbYz
  
  
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](
-https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4Z7U3449Z9F6A&currency_code=USD&source=url)
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4Z7U3449Z9F6A&currency_code=USD&source=url)
