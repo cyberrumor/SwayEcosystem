@@ -1,5 +1,7 @@
 SwayEcosystem
 --------------------------------------------------
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberrumor)
+
 I made this because I want to have a one stop shop
 for all the tweaks I typically give a fresh install.
 
@@ -45,14 +47,3 @@ and configure a bootloader!
 
 After you've rebooted and confirmed the system is working correctly, 
 I highly recommend configuring [silent boot](https://wiki.archlinux.org/index.php/Silent_boot). 
-
-
-Finally, if you would like to encourage my consumption of creatine, thank you!
-
-
- VRSC:RGPy7GXThV1j2ZDVRtbqPA7vGmqb24vyo7
-
- BTC:39pggoYtcGJ5Vg5DACvvCqp99a4DNiSbYz
- 
- 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=4Z7U3449Z9F6A&currency_code=USD&source=url)
