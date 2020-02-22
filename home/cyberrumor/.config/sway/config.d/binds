@@ -34,7 +34,7 @@ bindsym $mod4+l exec 'grim /tmp/screenshot.png && \
 		convert /tmp/screenshot.png -blur 0x7 /tmp/blurshot.png && \
 		rm /tmp/screenshot.png && \
 		swaylock -i /tmp/blurshot.png && \
-		rm /tmp/blurshot.png'
+		rm /tmp/blurshot.png &'
 
 # Move your focus around
 bindsym $mod+$left focus left
