@@ -60,7 +60,7 @@
         "tooltip": false 
     },
     "clock": {
-        "format": "{:%a, %b %d %_I:%M %p}",
+        "format": "{:%a, %b %d %I:%M %p}",
         "tooltip": false
     }
 }
