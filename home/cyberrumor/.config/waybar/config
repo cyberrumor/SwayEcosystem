@@ -16,37 +16,37 @@
     },
     "network": {
         "format-wifi": "{icon}",
-        "format-icons": ["冷", "爛", "嵐", "襤", "蠟"],
-        "format-ethernet": "",
-        "format-disconnected": "來",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-ethernet": "󰡀",
+        "format-disconnected": "󰤮",
         "on-click": "termite --name=launcher -e 'sudo wifi-menu'",
         "tooltip": false
     },
     "battery": {
         "format-discharging": "{icon}",
-        "format-icons": ["", "", "", "", "", "", "", "", "", "", ""],
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "format-charging": "",
-        "format-full": "",
+        "format-full": "",
         "tooltip": false
     },
     "battery#charging": {
         "format-charging": "{icon}",
-        "format-icons": ["", "", "", "", "", "", ""],
+        "format-icons": ["󰂆", "󰂇", "󰂈", "󰂉", "󰂊", "󰂋", "󰂄"],
         "format-discharging": "",
         "format-full": "",
         "tooltip": false
     },
     "pulseaudio": {
         "format": "{icon}",
-        "format-bluetooth": "{icon}",
-        "format-muted": "",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-bluetooth": "{icon}󰂯",
+        "format-muted": "󰖁",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "format-icons": {
-            "headphones": "",
-            "headset": "",
-            "phone": "",
-            "default": ["", "", ""]
+            "headphones": "󰋋",
+            "headset": "󰋎",
+            "phone": "󰥒",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "scroll-step": 1,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -54,8 +54,8 @@
     },
     "pulseaudio#mic": {
         "format": "{format_source}",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-source": "󰍬",
+        "format-source-muted": "󰍭",
         "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
         "tooltip": false 
     },

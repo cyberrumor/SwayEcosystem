@@ -25,11 +25,11 @@ intensity() {
 result=$(intensity)
 
 barfull() {
-	seq -s "" $(( $volume / 10 )) | sed 's/[0-9]//g'
+	seq -s "󰽢" $(( $volume / 10 )) | sed 's/[0-9]//g'
 }
 
 barempty() {
-	seq -s "" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g'
+	seq -s "󰽤" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g'
 }
 
 send_notification_unmuted() {
@@ -47,7 +47,7 @@ send_notification_muted() {
 correctly_notify_muted() {
 	if [[ $volume -lt 10 ]]; then
 		makoctl dismiss --all && \
-		notify-send -i audio-volume-muted-symbolic.symbolic ""
+		notify-send -i audio-volume-muted-symbolic.symbolic "󰽤󰽤󰽤󰽤󰽤󰽤󰽤󰽤󰽤"
 	else
 		send_notification_muted
 	fi
@@ -56,7 +56,7 @@ correctly_notify_muted() {
 correctly_notify_unmuted() {
 	if [[ $volume -lt 10 ]]; then
 		makoctl dismiss --all && \
-		notify-send -i audio-volume-$result-symbolic.symbolic ""
+		notify-send -i audio-volume-$result-symbolic.symbolic "󰽢"
 	else
 		send_notification_unmuted
 	fi
