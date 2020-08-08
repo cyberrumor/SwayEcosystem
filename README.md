@@ -2,11 +2,7 @@
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberrumor)
 
 
-<img src="/home/cyberrumor/makodemo.png">
-
-Here's the same scene, right after swapping wallpapers with pywal:
-
-<img src="/home/cyberrumor/waldemo.png">
+[![Wallpaper switching demonstration mp4](doc/DASH-720.gif)](https://www.youtube.com/embed/sl8T_kw7aDs)
 
 Pretty lockscreen achieved by combing [grim](https://github.com/emersion/grim) + [imagemagick](https://imagemagick.org/index.php) + swaylock
 
