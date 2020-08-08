@@ -3,9 +3,7 @@ xdg-user-dirs-update
 echo 'Copying user configuration files to your user folder.'
 cp -rT home/cyberrumor ~/
 echo 'Cleaning up unused files'
-rm ~/makodemo.png
 rm ~/blurshot.png
-rm ~/waldemo.png
 chmod +x ~/.config/mako/launch.sh
 echo 'Setting wallpaper with wal'
 wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
