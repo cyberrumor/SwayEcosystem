@@ -1,12 +1,15 @@
 # SwayEcosystem
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/cyberrumor)
 
-
-[![Wallpaper switching demonstration mp4](doc/DASH-720.gif)](https://www.youtube.com/embed/sl8T_kw7aDs)
+<p align="center">
+  <img width="960" height="540" src="doc/DASH-720.gif">
+</p>
 
 Pretty lockscreen achieved by combing [grim](https://github.com/emersion/grim) + [imagemagick](https://imagemagick.org/index.php) + swaylock
 
-<img src="/home/cyberrumor/blurshot.png">
+<p align="center">
+  <img width="960" height="540" src="/home/cyberrumor/blurshot.png">
+</p>
 
 # Attention to Detail
 - All parts of the interface are themed with pywal, not just terminal colors. This includes the bar, app launcher, notifications, and even the lock screen. 
