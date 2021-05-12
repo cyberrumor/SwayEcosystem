@@ -1,0 +1,19 @@
+font:
+    normal:
+        family: terminus
+        style: Regular
+    bold:
+        family: terminus
+        style: Bold
+    italic:
+        family: terminus
+        style: Italic
+    bold_italic:
+        family: terminus
+        style: Bold Italic
+    size: 14
+
+env:
+  TERM: xterm-256color
+
+background_opacity: 0.9

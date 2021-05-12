@@ -3,7 +3,7 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "network", "pulseaudio#mic", "pulseaudio", "battery", "battery#charging"],
+    "modules-right": ["memory", "temperature", "pulseaudio"],
     "memory": {
         "format": "{used:0.1f} | {avail:0.1f}",
         "tooltip": false
@@ -12,28 +12,6 @@
         "thermal-zone": 0,
         "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
         "format": "{temperatureC}°C",
-        "tooltip": false
-    },
-    "network": {
-        "format-wifi": "{icon}",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "format-ethernet": "󰡀",
-        "format-disconnected": "󰤮",
-        "on-click": "termite --name=launcher -e 'sudo wifi-menu'",
-        "tooltip": false
-    },
-    "battery": {
-        "format-discharging": "{icon}",
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "format-charging": "",
-        "format-full": "",
-        "tooltip": false
-    },
-    "battery#charging": {
-        "format-charging": "{icon}",
-        "format-icons": ["󰂆", "󰂇", "󰂈", "󰂉", "󰂊", "󰂋", "󰂄"],
-        "format-discharging": "",
-        "format-full": "",
         "tooltip": false
     },
     "pulseaudio": {
@@ -51,13 +29,6 @@
         "scroll-step": 1,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
-    },
-    "pulseaudio#mic": {
-        "format": "{format_source}",
-        "format-source": "󰍬",
-        "format-source-muted": "󰍭",
-        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-        "tooltip": false 
     },
     "clock": {
         "format": "{:%a, %b %d %I:%M %p}",
