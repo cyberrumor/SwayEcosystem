@@ -10,7 +10,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: Ubuntu Mono, Material Design Icons;
+    font-family: Terminus, Material Design Icons;
     font-size: medium;
     min-height: 0;
 }
@@ -31,7 +31,7 @@ window#waybar {
     background: @foreground;
     color: @background
 }
-#mode, #clock, #memory, #temperature, #network, #pulseaudio, #pulseaudio.muted, #pulseaudio.mic, #battery, #battery.charging {
+#mode, #clock, #memory, #temperature, #pulseaudio, #pulseaudio.muted {
     padding: 0 10px;
     margin: 0 5px;
     background: transparent;
@@ -44,33 +44,10 @@ window#waybar {
 }
 #temperature {
 }
-#network {
-}
 #clock {
 }
 #pulseaudio {
 }
 #pulseaudio.muted {
 }
-#pulseaudio.mic {
-}
-#battery {
-}
-#battery.charging {
-}
-@keyframes blink {
-    to {
-        color: @background;
-    }
-}
-#battery.warning:not(.charging) {
-    background: transparent;
-    color: @foreground;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
 
