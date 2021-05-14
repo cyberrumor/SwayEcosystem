@@ -11,28 +11,18 @@
     "temperature#cpu": {
         "thermal-zone": 0,
         "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
-        "format": "CPU:{temperatureC}°C",
+        "format": "CPU:{temperatureC}",
         "tooltip": false
     },
     "temperature#gpu": {
         "thermal-zone": 0,
         "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
-        "format": "GPU:{temperatureC}°C",
+        "format": "GPU:{temperatureC}",
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "{icon}",
-        "format-bluetooth": "{icon}󰂯",
-        "format-muted": "󰖁",
-        "format-source": "󰍬",
-        "format-source-muted": "󰍭",
-        "format-icons": {
-            "headphones": "󰋋",
-            "headset": "󰋎",
-            "phone": "󰥒",
-            "default": ["󰕿", "󰖀", "󰕾"]
-        },
-        "scroll-step": 1,
+        "format": "{volume}%",
+        "scroll-step": 5,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
     },
