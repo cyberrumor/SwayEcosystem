@@ -33,7 +33,7 @@ send_notification_unmuted() {
 }
 
 send_notification_muted() {
-	drawbar=$(( $volume / 10 ))
+	drawbar="muted"
 	makoctl dismiss --all && \
 	notify-send -i audio-volume-muted-symbolic.symbolic "$drawbar"
 }
