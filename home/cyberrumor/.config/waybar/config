@@ -3,15 +3,21 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["memory", "temperature", "pulseaudio"],
+    "modules-right": ["temperature#cpu", "temperature#gpu", "memory", "pulseaudio"],
     "memory": {
-        "format": "{used:0.1f} | {avail:0.1f}",
+        "format": "{used:0.1f} | {total:0.1f}",
         "tooltip": false
     },
-    "temperature": {
+    "temperature#cpu": {
         "thermal-zone": 0,
-        "hwmon-path": "/sys/class/thermal/thermal_zone0/temp",
-        "format": "{temperatureC}°C",
+        "hwmon-path": "/sys/class/hwmon/hwmon1/temp1_input",
+        "format": "CPU:{temperatureC}°C",
+        "tooltip": false
+    },
+    "temperature#gpu": {
+        "thermal-zone": 0,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "format": "GPU:{temperatureC}°C",
         "tooltip": false
     },
     "pulseaudio": {

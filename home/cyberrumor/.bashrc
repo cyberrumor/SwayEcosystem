@@ -26,6 +26,6 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 # run neofetch if using termite
-if [[ $TERM == xterm-termite ]]; then
+if [[ $TERM == xterm-256color ]]; then
 	clear && neofetch --gtk2 off --gtk3 off
 fi

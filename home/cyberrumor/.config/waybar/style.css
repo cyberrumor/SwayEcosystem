@@ -31,7 +31,7 @@ window#waybar {
     background: @foreground;
     color: @background
 }
-#mode, #clock, #memory, #temperature, #pulseaudio, #pulseaudio.muted {
+#mode, #clock, #memory, #temperature.cpu, #temperature.gpu, #pulseaudio, #pulseaudio.muted {
     padding: 0 10px;
     margin: 0 5px;
     background: transparent;
@@ -42,7 +42,9 @@ window#waybar {
 }
 #memory {
 }
-#temperature {
+#temperature.cpu {
+}
+#temperature.gpu {
 }
 #clock {
 }
