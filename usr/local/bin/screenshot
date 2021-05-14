@@ -1,0 +1,2 @@
+#!/bin/sh
+grim /home/$USER/Pictures/screenshot.png
