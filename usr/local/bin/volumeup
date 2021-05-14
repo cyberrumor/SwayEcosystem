@@ -28,17 +28,15 @@ result=$(intensity)
 
 send_notification() {
 	volume=$(currentvolume)
-	bar=$(seq -s "󰽢" $(( $volume / 10 )) | sed 's/[0-9]//g')
-	barempty=$(seq -s "󰽤" $(( (110 - $volume) / 10)) | sed 's/[0-9]//g')
 	makoctl dismiss --all && \
-	notify-send -i audio-volume-$result-symbolic.symbolic "$bar$barempty"
+	notify-send -i audio-volume-$result-symbolic.symbolic "$volume"
 }
 
 correctly_notify() {
 	volume=$(currentvolume)
 	if [[ $volume -le 0 ]]; then
 		makoctl dismiss --all && \
-		notify-send -i audio-volume-$result-symbolic.symbolic "󰽤󰽤󰽤󰽤󰽤󰽤󰽤󰽤󰽤"
+		notify-send -i audio-volume-$result-symbolic.symbolic "$volume"
 	else
 		send_notification
 	fi

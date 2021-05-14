@@ -10,8 +10,3 @@ wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
 ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
 echo 'To change your wallpaper (which will theme your system to match), run
 	$ wal -i /path/to/image.jpg'
-echo "Installing the required icon pack so waybar functions correctly."
-cd ~/Builds
-git clone https://aur.archlinux.org/ttf-material-design-icons-git.git
-cd ttf-material-design-icons-git
-makepkg -si
