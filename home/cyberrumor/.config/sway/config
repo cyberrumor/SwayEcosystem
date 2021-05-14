@@ -209,6 +209,14 @@ bindsym $mod+r mode "resize"
 
 input * xkb_numlock enable
 
+# disable mouse acceleration
+input type:pointer {
+	accel_profile flat
+}
+
+
+
+
 ### output
 # pywal assigns the image you select with it to the variable $wallpaper
 # if you want a unique wallpaper on each monitor, see man swaybg for assigning outputs
