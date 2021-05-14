@@ -21,7 +21,8 @@
         "tooltip": false
     },
     "pulseaudio": {
-        "format": "{volume}%",
+        "format": "VOL:{volume}%",
+        "format-muted": "MUT:{volume}%",
         "scroll-step": 5,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
