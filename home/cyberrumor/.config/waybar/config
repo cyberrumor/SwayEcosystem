@@ -3,10 +3,16 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["temperature#cpu", "temperature#gpu", "memory", "pulseaudio"],
+    "modules-right": ["custom/xmr", "temperature#cpu", "temperature#gpu", "memory", "pulseaudio"],
     "memory": {
         "format": "{used:0.1f} | {total:0.1f}",
         "tooltip": false
+    },
+    "custom/xmr": {
+        "format": "{}",
+        "escape": true,
+        "interval": 1800,
+        "exec": "cat /usr/share/nginx/html/assets/xmr_price.txt",
     },
     "temperature#cpu": {
         "thermal-zone": 0,

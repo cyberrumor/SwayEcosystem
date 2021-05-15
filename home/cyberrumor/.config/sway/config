@@ -222,7 +222,10 @@ input type:pointer {
 # if you want a unique wallpaper on each monitor, see man swaybg for assigning outputs
 # otherwise, it will set the image to all monitors, and you can ignore this.
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+# output "*" adaptive_sync on
 output "*" bg $wallpaper fill
+output "*" adaptive_sync on
+
 
 # colors
 # see man 5 sway on how to set colors
@@ -255,6 +258,10 @@ exec_always "$HOME/.config/mako/launch.sh"
 
 # status bar
 exec waybar
+
+# auto tiling
+exec autotiling
+
 
 # includes from system-wide
 include /etc/sway/config.d/*
