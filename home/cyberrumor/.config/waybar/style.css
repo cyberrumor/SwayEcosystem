@@ -4,9 +4,6 @@
 /* use the below line for semi-transparent waybar */
 @import url("../../.cache/wal/colors-custom-gtk3.css");
 
-/* get your icons from the link below */
-/* https://aur.archlinux.org/packages/ttf-material-design-icons-git/ */
-
 * {
     border: none;
     border-radius: 0;
@@ -31,7 +28,7 @@ window#waybar {
     background: @foreground;
     color: @background
 }
-#mode, #clock, #xmr, #memory, #temperature.cpu, #temperature.gpu, #pulseaudio, #pulseaudio.muted {
+#mode, #clock, #xmr, #memory, #temperature.cpu, #temperature.gpu, #pulseaudio, #pulseaudio.muted, #idle_inhibitor {
     padding: 0 10px;
     margin: 0 5px;
     background: transparent;
@@ -47,6 +44,8 @@ window#waybar {
 #temperature.gpu {
 }
 #clock {
+}
+#idle_inhibitor {
 }
 #pulseaudio {
 }

@@ -3,7 +3,7 @@
     "height": 19,
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/xmr", "temperature#cpu", "temperature#gpu", "memory", "pulseaudio"],
+    "modules-right": ["custom/xmr", "temperature#cpu", "temperature#gpu", "memory", "idle_inhibitor", "pulseaudio"],
     "memory": {
         "format": "{used:0.1f} | {total:0.1f}",
         "tooltip": false
@@ -32,6 +32,14 @@
         "scroll-step": 5,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "☕",
+            "deactivated": "☽",
+        },
+        "tooltip": false,
     },
     "clock": {
         "format": "{:%a, %b %d %I:%M %p}",
