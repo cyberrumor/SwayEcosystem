@@ -156,10 +156,16 @@ bindsym $mod+v splitv
 bindsym $mod+e layout toggle split
 
 # Make the current focus fullscreen
-bindsym $mod+f fullscreen
+bindsym $mod+m fullscreen
+
+# Make the current focus tiling
+bindsym $mod+t tiling
+
+# Make the current focus floating
+bindsym $mod+f floating toggle
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+space focus mode_toggle
@@ -245,11 +251,6 @@ exec swayidle -w \
 		swaylock -i /tmp/blurshot.png && \
 		rm /tmp/blurshot.png &'
 
-# xwayland version
-for_window [class="Firefox"] inhibit_idle fullscreen
-
-# wayland version
-for_window [app_id="firefox"] inhibit_idle fullscreen
 
 # start notification daemon
 # configure it at ~/.config/wal/templates/mako.conf

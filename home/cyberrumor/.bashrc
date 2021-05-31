@@ -21,6 +21,7 @@
 
 # Set ls colors
 alias ls='ls --color=auto'
+alias sl='ls --color=auto'
 
 # Set the prompt
 PS1='[\u@\h \W]\$ '
