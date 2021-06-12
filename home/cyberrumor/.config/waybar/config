@@ -37,7 +37,7 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "π",
+            "activated": "Π",
             "deactivated": "Σ",
         },
         "tooltip": false,
