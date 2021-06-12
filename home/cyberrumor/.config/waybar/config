@@ -13,6 +13,7 @@
         "escape": true,
         "interval": 1800,
         "exec": "cat /usr/share/nginx/html/assets/xmr_price.txt",
+	"tooltip": false
     },
     "temperature#cpu": {
         "thermal-zone": 0,
@@ -36,8 +37,8 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "☕",
-            "deactivated": "☽",
+            "activated": "π",
+            "deactivated": "Σ",
         },
         "tooltip": false,
     },
