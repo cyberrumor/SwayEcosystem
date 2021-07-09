@@ -6,7 +6,7 @@ echo 'Cleaning up unused files'
 rm ~/blurshot.png
 chmod +x ~/.config/mako/launch.sh
 echo 'Setting wallpaper with wal'
-wal -i /usr/share/backgrounds/archlinux/archlinux-burn.jpg
+wal -i /usr/share/backgrounds/archlinux/archbtw.png
 ln -s ~/.cache/wal/mako.conf ~/.config/mako/config
 echo 'Installing autotiling for bspwm behavior'
 mkdir ~/Builds
